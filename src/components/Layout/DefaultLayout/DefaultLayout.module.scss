@@ -1,0 +1,24 @@
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.container {
+    max-width: 100%;
+    width: 100vw;
+    min-height: 1000px;
+    margin-top: 60px;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    flex: 1 1 auto;
+}
+
+.content {
+    width: 100%;
+    flex: 1;
+}
