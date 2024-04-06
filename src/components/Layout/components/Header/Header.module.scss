@@ -25,3 +25,113 @@
     padding-right: 24px;
     padding-left: 16px;
 }
+
+.clear,
+.loading,
+.search-btn,
+.form-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.search {
+    position: relative;
+    min-width: 200px;
+    max-width: 500px;
+    width: 500px;
+    height: 46px;
+    padding: 0px 8px;
+    flex: 1;
+}
+
+.form-search {
+    flex-direction: row;
+    padding-left: 16px;
+    background: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(22, 24, 35, 0.06);
+
+    &:hover {
+        border: 1px solid rgba(22, 24, 35, 0.34);
+    }
+}
+
+.input-search {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    color: rgb(22, 24, 35);
+    caret-color: rgb(254, 44, 85);
+}
+
+.clear {
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    border: none;
+    color: rgba(22, 24, 35, 0.34);
+    font-size: 16px;
+}
+.loading {
+    position: absolute;
+    right: 70px;
+    border: none;
+    color: rgba(22, 24, 35, 0.34);
+    font-size: 16px;
+    animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.search-btn {
+    width: 56px;
+    height: 46px;
+    padding: 12px 16px 12px 10px;
+    color: rgba(22, 24, 35, 0.34);
+    border: none;
+    position: relative;
+
+    &::before {
+        content: "";
+        width: 1px;
+        height: 28px;
+        margin: 0 -1px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.06);
+        color: rgba(22, 24, 35);
+    }
+}
+
+.header-right-container {
+    width: 283px;
+}

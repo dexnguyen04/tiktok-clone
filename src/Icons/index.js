@@ -1,6 +1,6 @@
 export const PlusIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -21,8 +21,8 @@ export const PlusIcon = ({
 );
 
 export const SearchIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -42,7 +42,7 @@ export const SearchIcon = ({
     </svg>
 );
 
-export const XIcon = ({ width = "3.2rem", height = "3.2rem", className }) => (
+export const XIcon = ({ width = "2.4rem", height = "2.4rem", className }) => (
     <svg
         className={className}
         width={width}
@@ -62,8 +62,8 @@ export const XIcon = ({ width = "3.2rem", height = "3.2rem", className }) => (
 );
 
 export const LoadingIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -80,8 +80,8 @@ export const LoadingIcon = ({
 );
 
 export const MessageIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -102,8 +102,8 @@ export const MessageIcon = ({
 );
 
 export const NotificationIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -124,8 +124,8 @@ export const NotificationIcon = ({
 );
 
 export const HomeIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -146,8 +146,8 @@ export const HomeIcon = ({
 );
 
 export const HomeActiveIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -168,8 +168,8 @@ export const HomeActiveIcon = ({
 );
 
 export const LeftArrowUserIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -186,8 +186,8 @@ export const LeftArrowUserIcon = ({
 );
 
 export const LeftArrowUserActiveIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -205,8 +205,8 @@ export const LeftArrowUserActiveIcon = ({
 );
 
 export const GroupUserIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg
@@ -237,8 +237,8 @@ export const GroupUserIcon = ({
 );
 
 export const GroupUserActiveIcon = ({
-    width = "3.2rem",
-    height = "3.2rem",
+    width = "2.4rem",
+    height = "2.4rem",
     className,
 }) => (
     <svg

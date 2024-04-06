@@ -13,14 +13,26 @@ function Header() {
                     <img src={images.logo} alt="TikTok" />
                 </div>
                 <div className={cx("search")}>
-                    <input placeholder="Search" />
-                    <button className={cx("clear")}>
-                        <XIcon />
-                    </button>
-                    <LoadingIcon />
-                    <button className={cx("search-btn")}>
-                        <SearchIcon />
-                    </button>
+                    <form className={cx("form-search")}>
+                        <input
+                            placeholder="Search"
+                            className={cx("input-search")}
+                        />
+                        <button className={cx("clear")}>
+                            <XIcon width="16px" height="16px" />
+                        </button>
+                        <span className={cx("loading")}>
+                            <LoadingIcon width="16px" height="16px" />
+                        </span>
+                        <button className={cx("search-btn")}>
+                            <SearchIcon width="24px" height="24px" />
+                        </button>
+                    </form>
+                </div>
+                <div className={cx("header-right-container")}>
+                    <div className={cx("upload")}></div>
+                    <div className={cx("message")}></div>
+                    <div className={cx("notifications")}></div>
                 </div>
             </div>
         </header>
