@@ -36,65 +36,83 @@
 }
 
 .logo {
-    width: 300px;
+    min-width: 300px;
     display: flex;
     align-items: center;
     justify-content: left;
+
+    a {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .search {
     position: relative;
+    width: 500px;
     min-width: 200px;
     max-width: 500px;
-    width: 500px;
     height: 46px;
-    padding: 0px 8px;
     flex: 1;
+
+    > div[data-tippy-root] {
+        width: 100%;
+    }
 }
 
 .form-search {
     flex-direction: row;
-    padding-left: 16px;
     background: rgba(22, 24, 35, 0.06);
     border-radius: 92px;
     overflow: hidden;
     position: relative;
     z-index: 1;
-    border: 1px solid rgba(22, 24, 35, 0.06);
+    border: 1px solid #fff;
 
-    &:hover {
-        border: 1px solid rgba(22, 24, 35, 0.34);
+    &:hover,
+    &:focus-within {
+        border: 1px solid #cacacc;
+    }
+
+    &:hover .search-btn {
+        background: rgba(22, 24, 35, 0.06);
+        color: rgba(22, 24, 35);
     }
 }
 
 .input-search {
     font-weight: 400;
     font-size: 16px;
+    font-family: "TikTokFont", "san-serif";
     line-height: 21px;
+    padding: 12px 0px 12px 16px;
     border: none;
     background: transparent;
     outline: none;
     width: 100%;
-    color: rgb(22, 24, 35);
+    color: rgba(22, 24, 35);
     caret-color: rgb(254, 44, 85);
 }
 
+input:not(:placeholder-shown) ~ .search-btn {
+    color: rgba(22, 24, 35);
+}
+
 .clear {
-    position: absolute;
-    top: 50%;
-    right: 70px;
-    transform: translateY(-50%);
+    margin: 0 12px;
     border: none;
-    color: rgba(22, 24, 35, 0.34);
+    color: var(--search-icon-color);
     font-size: 16px;
 }
 .loading {
-    position: absolute;
-    right: 70px;
+    margin: 0 12px;
     border: none;
-    color: rgba(22, 24, 35, 0.34);
+    color: var(--search-icon-color);
     font-size: 16px;
-    animation: loading 1s linear infinite;
+
+    svg {
+        animation: loading 1s linear infinite;
+    }
 }
 
 @keyframes loading {
@@ -106,30 +124,19 @@
     }
 }
 
+.span-Spliter {
+    width: 1px;
+    height: 28px;
+    background-color: #4c4e57;
+}
+
 .search-btn {
     width: 56px;
-    height: 46px;
+    height: 45px;
     padding: 12px 16px 12px 10px;
-    color: rgba(22, 24, 35, 0.34);
+    color: var(--search-icon-color);
     border: none;
     position: relative;
-
-    &::before {
-        content: "";
-        width: 1px;
-        height: 28px;
-        margin: 0 -1px;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(22, 24, 35, 0.12);
-    }
-
-    &:hover {
-        background: rgba(22, 24, 35, 0.06);
-        color: rgba(22, 24, 35);
-    }
 }
 
 .header-right-container {
