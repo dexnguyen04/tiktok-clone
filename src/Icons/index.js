@@ -244,8 +244,8 @@ export const GroupUserActiveIcon = ({
     <svg
         className={className}
         width={width}
-        data-e2e=""
         height={height}
+        data-e2e=""
         viewBox="0 0 48 48"
         fill="currentColor"
         xmlns="http://www.w3.org/2000/svg"
@@ -254,5 +254,57 @@ export const GroupUserActiveIcon = ({
         <path d="M7.10396 34.7906C8.78769 30.2189 12.8204 27 18.0009 27C23.1818 27 27.2107 30.2213 28.8958 34.7898C29.3075 35.906 28.6141 37 27.5 37H8.5C7.38629 37 6.69289 35.9067 7.10396 34.7906Z"></path>
         <path d="M40.6308 37H32C31.2264 34.1633 30.0098 31.5927 28.144 29.7682C29.5384 28.9406 31.1829 28.5 33 28.5C37.239 28.5 40.536 30.8992 41.9148 35.0108C42.2516 36.0154 41.5423 37 40.6308 37Z"></path>
         <path d="M33 26.5C36.0376 26.5 38.5 24.0376 38.5 21C38.5 17.9624 36.0376 15.5 33 15.5C29.9624 15.5 27.5 17.9624 27.5 21C27.5 24.0376 29.9624 26.5 33 26.5Z"></path>
+    </svg>
+);
+
+export const VerifyBadgeIcon = ({
+    width = "2.4rem",
+    height = "2.4rem",
+    className,
+}) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        fontSize="14px"
+        data-e2e=""
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <g clipPath="url(#Icon_Color-Verified_Badge_svg__a)">
+            <path
+                d="M0 24a24 24 0 1 1 48 0 24 24 0 0 1-48 0Z"
+                fill="#20D5EC"
+            ></path>
+            <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M37.12 15.88a3 3 0 0 1 0 4.24l-13.5 13.5a3 3 0 0 1-4.24 0l-8.5-8.5a3 3 0 1 1 4.24-4.24l6.38 6.38 11.38-11.38a3 3 0 0 1 4.24 0Z"
+                fill="#fff"
+            ></path>
+        </g>
+    </svg>
+);
+
+export const DotsHorizontal = ({
+    width = "2.4rem",
+    height = "2.4rem",
+    className,
+}) => (
+    <svg
+        className={className}
+        width={width}
+        height={height}
+        data-e2e=""
+        viewBox="0 0 48 48"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M4 24C4 21.7909 5.79086 20 8 20C10.2091 20 12 21.7909 12 24C12 26.2091 10.2091 28 8 28C5.79086 28 4 26.2091 4 24ZM20 24C20 21.7909 21.7909 20 24 20C26.2091 20 28 21.7909 28 24C28 26.2091 26.2091 28 24 28C21.7909 28 20 26.2091 20 24ZM36 24C36 21.7909 37.7909 20 40 20C42.2091 20 44 21.7909 44 24C44 26.2091 42.2091 28 40 28C37.7909 28 36 26.2091 36 24Z"
+        ></path>
     </svg>
 );

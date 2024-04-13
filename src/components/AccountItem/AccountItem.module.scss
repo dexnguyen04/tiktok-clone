@@ -1,0 +1,112 @@
+.wrapper {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 9px 16px;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+
+    &:hover .item-wrapper .action-container {
+        display: flex;
+    }
+
+    .span-avata {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 12px;
+        padding: 0px;
+        font-feature-settings: "tnum";
+        position: relative;
+        overflow: hidden;
+        color: rgb(255, 255, 255);
+        white-space: nowrap;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 32px;
+        border-radius: 50%;
+        background-color: rgba(136, 136, 136, 0.5);
+
+        .img-avata {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .user-info {
+            .action-container {
+                margin-left: 8px;
+                width: 24px;
+                flex: 0 0 24px;
+                display: flex;
+                flex-direction: column;
+                -webkit-box-align: center;
+                align-items: center;
+                height: 22px;
+
+                .more-container {
+                    position: relative;
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .item-wrapper {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        align-items: center;
+        flex: 0 1 auto;
+        min-width: 0px;
+        width: 100%;
+
+        .user-name {
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            .verify-badge {
+                margin-left: 8px;
+
+                svg {
+                    height: 15px;
+                }
+            }
+        }
+
+        .nick-name {
+            font-size: 14px;
+            line-height: 18px;
+            color: rgba(22, 24, 35, 0.5);
+            font-weight: 400;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .action-container {
+            display: none;
+            width: 24px;
+            height: 22px;
+            flex: 0 0 24px;
+        }
+    }
+
+    .more-text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 21px;
+        color: rgb(22, 24, 35);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

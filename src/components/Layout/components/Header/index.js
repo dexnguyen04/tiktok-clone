@@ -4,8 +4,10 @@ import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
-import { SearchIcon, XIcon, LoadingIcon } from "~/Icons";
+import { SearchIcon, LoadingIcon } from "~/Icons";
 import { wrapper as PopperWrapper } from "~/components/Popper";
+import AccountItem from "~/components/AccountItem";
+import Button from "~/components/Button";
 
 const cx = classNames.bind(styles);
 
@@ -14,8 +16,8 @@ function Header() {
 
     useEffect(() => {
         setTimeout(() => {
-            setSearchResult([1, 2, 3]);
-        }, 2000);
+            setSearchResult([]);
+        }, 0);
     }, []);
 
     return (
@@ -37,7 +39,19 @@ function Header() {
                                 tabIndex="-1"
                                 {...attrs}
                             >
-                                <PopperWrapper>Ket qua</PopperWrapper>
+                                <PopperWrapper>
+                                    <div className={cx("account-title")}>
+                                        Account
+                                    </div>
+                                    <AccountItem />
+                                    <AccountItem />
+                                    <AccountItem />
+                                    <AccountItem />
+                                    <AccountItem />
+                                    <AccountItem />
+                                    <AccountItem />
+                                    <AccountItem />
+                                </PopperWrapper>
                             </div>
                         )}
                     >
@@ -46,9 +60,9 @@ function Header() {
                                 placeholder="Search"
                                 className={cx("input-search")}
                             />
-                            <button className={cx("clear")}>
+                            {/* <button className={cx("clear")}>
                                 <XIcon width="16px" height="16px" />
-                            </button>
+                            </button> */}
                             <span className={cx("loading")}>
                                 <LoadingIcon width="12px" height="12px" />
                             </span>
@@ -60,9 +74,7 @@ function Header() {
                     </Tippy>
                 </div>
                 <div className={cx("header-right-container")}>
-                    <div className={cx("upload")}></div>
-                    <div className={cx("message")}></div>
-                    <div className={cx("notifications")}></div>
+                    <Button>Login</Button>
                 </div>
             </div>
         </header>
