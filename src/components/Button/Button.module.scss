@@ -1,19 +1,98 @@
 .wrapper {
-    color: rgb(255, 255, 255);
-    background-color: rgb(254, 44, 85);
-    border: none;
-    border-radius: 4px;
     font-size: 1.6rem;
     font-weight: 700;
+    border-radius: 4px;
     padding: 6px 8px;
     min-height: 36px;
     min-width: 100px;
     cursor: pointer;
-    margin-left: 16px;
     line-height: 21px;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 8px;
     user-select: none;
     position: relative;
+    background: var(--white);
+    border: 1px solid transparent;
+
+    + .wrapper {
+        margin-left: 16px;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+
+// Button types
+.primary {
+    color: var(--white) !important;
+    background-color: var(--primary);
+
+    &:hover {
+        background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.06),
+                rgba(0, 0, 0, 0.06)
+            ),
+            rgb(254, 44, 85);
+    }
+}
+
+.upload {
+    min-width: 110px;
+    font-weight: 600;
+    padding: 0px 16px;
+    border-radius: 2px;
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.outline {
+    color: var(--primary) !important;
+    border-radius: 2px;
+    border-color: var(--primary);
+    padding: 1px 15px;
+    min-width: 96px !important;
+
+    &:hover {
+        background-color: #fe2c5514;
+    }
+}
+
+.rounded {
+    min-width: 90px;
+    font-size: 14px;
+    line-height: 30px;
+    min-height: 32px;
+    height: 32px;
+    padding: 0px 8px;
+    color: rgba(22, 24, 35, 0.75) !important;
+    border-radius: 9999px;
+    border-color: rgba(22, 24, 35, 0.12);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    text-align: center;
+    white-space: nowrap;
+    transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
+// Button sizes
+.small {
+    min-width: 96px !important;
+}
+
+.large {
+    min-width: 168px !important;
+    min-height: 48px !important;
+    border-radius: 4px;
+    font-size: 18px;
 }

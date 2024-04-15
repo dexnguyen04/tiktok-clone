@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
-import { SearchIcon, LoadingIcon } from "~/Icons";
+import { SearchIcon, LoadingIcon, PlusIcon } from "~/Icons";
 import { wrapper as PopperWrapper } from "~/components/Popper";
 import AccountItem from "~/components/AccountItem";
 import Button from "~/components/Button";
@@ -14,11 +14,11 @@ const cx = classNames.bind(styles);
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([]);
-        }, 0);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setSearchResult([]);
+    //     }, 0);
+    // }, []);
 
     return (
         <header className={cx("wrapper")}>
@@ -44,13 +44,6 @@ function Header() {
                                         Account
                                     </div>
                                     <AccountItem />
-                                    <AccountItem />
-                                    <AccountItem />
-                                    <AccountItem />
-                                    <AccountItem />
-                                    <AccountItem />
-                                    <AccountItem />
-                                    <AccountItem />
                                 </PopperWrapper>
                             </div>
                         )}
@@ -74,7 +67,19 @@ function Header() {
                     </Tippy>
                 </div>
                 <div className={cx("header-right-container")}>
-                    <Button>Login</Button>
+                    <Button upload to={"/upload"}>
+                        <PlusIcon width="20px" height="20px" />
+                        <span>Upload</span>
+                    </Button>
+                    <Button
+                        primary
+                        to={"/upload"}
+                        onClick={() => {
+                            alert("Clicked!");
+                        }}
+                    >
+                        Login
+                    </Button>
                 </div>
             </div>
         </header>

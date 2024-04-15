@@ -50,8 +50,9 @@
 .search {
     position: relative;
     width: 500px;
-    min-width: 184px;
+    min-width: 200px;
     max-width: 500px;
+    padding: 0 8px;
     height: 46px;
     flex: 1;
 
@@ -102,6 +103,11 @@
     width: 100%;
     color: rgba(22, 24, 35);
     caret-color: rgb(254, 44, 85);
+
+    &::placeholder {
+        color: #4c4e57;
+        opacity: 1;
+    }
 }
 
 input:not(:placeholder-shown) ~ .search-btn {
@@ -150,7 +156,9 @@ input:not(:placeholder-shown) ~ .search-btn {
 }
 
 .header-right-container {
-    width: 283px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .account-title {

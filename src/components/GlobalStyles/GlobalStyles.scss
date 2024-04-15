@@ -1,6 +1,28 @@
 @import "normalize.css";
 // @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+// TikTok font
+@font-face {
+    font-family: TikTokDisplayFont;
+    src: url("/assets/fonts/TikTokDisplayFont-Bold.woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url("/assets/fonts/TikTokFont-Bold.woff2");
+    font-weight: 700;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url("/assets/fonts/TikTokFont-Regular.woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: TikTokFont;
+    src: url("/assets/fonts/TikTokFont-Semibold.woff2");
+    font-weight: 600;
+}
+
 :root {
     --primary: #fe2c55;
     --black: #000;
@@ -55,24 +77,14 @@ body {
     color: var(--text-color);
 }
 
-// TikTok font
-@font-face {
-    font-family: TikTokDisplayFont;
-    src: url("/assets/fonts/TikTokDisplayFont-Bold.woff2");
-    font-weight: 700;
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
 }
-@font-face {
-    font-family: TikTokFont;
-    src: url("/assets/fonts/TikTokFont-Bold.woff2");
-    font-weight: 700;
-}
-@font-face {
-    font-family: TikTokFont;
-    src: url("/assets/fonts/TikTokFont-Regular.woff2");
-    font-weight: 400;
-}
-@font-face {
-    font-family: TikTokFont;
-    src: url("/assets/fonts/TikTokFont-Semibold.woff2");
-    font-weight: 600;
+
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
 }
