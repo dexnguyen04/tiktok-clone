@@ -27,6 +27,27 @@
 }
 
 // Button types
+
+.rounded {
+    min-width: 90px;
+    font-size: 14px;
+    line-height: 30px;
+    min-height: 32px;
+    height: 32px;
+    padding: 0px 8px;
+    color: rgba(22, 24, 35, 0.75) !important;
+    border-radius: 9999px;
+    border-color: rgba(22, 24, 35, 0.12);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    text-align: center;
+    white-space: nowrap;
+    transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+    }
+}
+
 .primary {
     color: var(--white) !important;
     background-color: var(--primary);
@@ -62,26 +83,6 @@
 
     &:hover {
         background-color: #fe2c5514;
-    }
-}
-
-.rounded {
-    min-width: 90px;
-    font-size: 14px;
-    line-height: 30px;
-    min-height: 32px;
-    height: 32px;
-    padding: 0px 8px;
-    color: rgba(22, 24, 35, 0.75) !important;
-    border-radius: 9999px;
-    border-color: rgba(22, 24, 35, 0.12);
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
-    text-align: center;
-    white-space: nowrap;
-    transition: transform 0.3s cubic-bezier(0.4, 0.14, 0.3, 1);
-
-    &:hover {
-        border-color: rgba(22, 24, 35, 0.2);
     }
 }
 

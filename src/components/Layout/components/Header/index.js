@@ -4,19 +4,20 @@ import classNames from "classnames/bind";
 import Tippy from "@tippyjs/react/headless";
 import styles from "./Header.module.scss";
 import images from "~/assets/images";
-import { SearchIcon, LoadingIcon, PlusIcon } from "~/Icons";
+import { SearchIcon, LoadingIcon, PlusIcon, DotsHorizontal } from "~/Icons";
 import { wrapper as PopperWrapper } from "~/components/Popper";
 import AccountItem from "~/components/AccountItem";
 import Button from "~/components/Button";
+import MenuItem from "~/components/Popper/MenuItem";
 
 const cx = classNames.bind(styles);
 
 function Header() {
-    const [searchResult, setSearchResult] = useState([]);
+    const [searchResult, setSearchResult] = useState([1]);
 
     // useEffect(() => {
     //     setTimeout(() => {
-    //         setSearchResult([]);
+    //         setSearchResult([1]);
     //     }, 0);
     // }, []);
 
@@ -66,20 +67,22 @@ function Header() {
                         </form>
                     </Tippy>
                 </div>
-                <div className={cx("header-right-container")}>
-                    <Button upload to={"/upload"}>
+                <div className={cx("right-container")}>
+                    <Button
+                        styleBtn="upload"
+                        to={"/upload"}
+                        className={cx("upload-btn")}
+                    >
                         <PlusIcon width="20px" height="20px" />
                         <span>Upload</span>
                     </Button>
-                    <Button
-                        primary
-                        to={"/upload"}
-                        onClick={() => {
-                            alert("Clicked!");
-                        }}
-                    >
-                        Login
-                    </Button>
+                    <Button styleBtn="primary">Log in</Button>
+
+                    <MenuItem>
+                        <i className={cx("more-menu")}>
+                            <DotsHorizontal width="20px" height="20px" />
+                        </i>
+                    </MenuItem>
                 </div>
             </div>
         </header>

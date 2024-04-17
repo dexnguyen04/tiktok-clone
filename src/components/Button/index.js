@@ -7,15 +7,12 @@ const cx = classNames.bind(styles);
 function Button({
     to,
     href,
-    primary = false,
-    outline = false,
-    upload = false,
-    rounded = false,
-    small = false,
-    large = false,
+    styleBtn,
+    size,
     disabled = false,
     onClick,
     children,
+    className,
     ...passProps
 }) {
     let Component = "button";
@@ -23,8 +20,6 @@ function Button({
         onClick,
         ...passProps,
     };
-
-    // console.log("Button");
 
     if (disabled) {
         Object.keys(props).forEach((key) => {
@@ -46,12 +41,9 @@ function Button({
     }
 
     const classes = cx("wrapper", {
-        primary,
-        outline,
-        upload,
-        rounded,
-        small,
-        large,
+        [styleBtn]: styleBtn,
+        [size]: size,
+        [className]: className,
         disabled,
     });
 
